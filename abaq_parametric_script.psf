@@ -1,0 +1,17 @@
+#Creates a parametric study with 4 Variables
+#Defines possible values for the variables
+#Creates input files for each combination
+#Sequentially runs each input file.
+Variable=ParStudy(par=('theta1','theta2','theta3','theta4'), name='ASC') 						#define variables
+Variable.define(DISCRETE, par='theta1', domain=(00, 15, 30, 45, 60, 75, 90))					#initialize each of the variables
+Variable.define(DISCRETE, par='theta2', domain=(00, 15, 30, 45, 60, 75, 90))
+Variable.define(DISCRETE, par='theta3', domain=(15, 30, 60, 75, 00, 45, 90))
+Variable.define(DISCRETE, par='theta4', domain=(15, 30, 60, 75, 00, 45, 90))
+Variable.sample(NUMBER, par='theta1', number=7)													#Set number of variables
+Variable.sample(NUMBER, par='theta2', number=7)													#This defines the total number of simulations
+Variable.sample(NUMBER, par='theta3', number=7)											
+Variable.sample(NUMBER, par='theta4', number=7)
+Variable.combine(MESH, name='parametric')														#Name for the simulation jobs
+Variable.generate(template='Tension-parametric-asc')											#Base input file template
+Variable.execute(ALL, execOptions='cpus=8')			
+Variable.report(FILE, results=par('theta1','theta2','theta3','theta4'), file='Variable.PSE.psr') #Write report with the parametric variables for each simulation
