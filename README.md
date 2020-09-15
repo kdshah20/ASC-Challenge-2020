@@ -20,7 +20,8 @@ The list below gives the name of each file with its description to help the read
 6) NN_angle.py: Python script for creating, fitting and evaluating a neural network based on the input data
 7) stackseq.txt: Data file contaning 1314 different 8 ply composite laminate stacking sequences
 8) strength_values.txt: Data file containing corressponding tensile strength values for stacking sequences in stackseq.txt
-9) theta_values-ohT: Data file contaning 8 ply open hole composite laminate stacking sequences
-10) strength_values-ohT: Data file contaning 8 ply open hole composite laminate tensile strength values for stacking sequences in theta_values-ohT
-11) effective-Ex-ohT: Data file for effective laminate stiffness for open hole composite specimens
-12) openhole_v2.py: Python script for determining analytical strength of any given open-hole lamina orientation.
+9) Effective_stiffness.txt: Data file for effective stiffness values for 8-ply composite laminate specimens.
+10) theta_values-ohT: Data file contaning 8 ply open hole composite laminate stacking sequences
+11) strength_values-ohT: Data file contaning 8 ply open hole composite laminate tensile strength values for stacking sequences in theta_values-ohT
+12) effective-Ex-ohT: Data file for effective laminate stiffness for open hole composite specimens
+13) openhole_v2.py: Python script for determining analytical strength of any given open-hole lamina orientation.
